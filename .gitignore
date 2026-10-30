@@ -1,0 +1,69 @@
+# ESP-IDF / CMake 本机构建产物与迁移备份
+/build/
+/build-*/
+/build_*/
+/managed_components/
+/sdkconfig
+/sdkconfig.old
+/sdkconfig.*.old
+/compile_commands.json
+/CMakeCache.txt
+/CMakeFiles/
+
+# SDK 与第三方源码缓存，同时匹配本地符号链接
+/.sdk
+/.deps
+
+# 官方 Mosaico / Iris 的本地会话、设备状态与日志
+/.gateway/
+/.mosaico-runs/
+/.codex-runs/
+
+# Python 虚拟环境和缓存
+/.venv/
+/venv/
+/.ble-tools/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# 历史字体工具的安装依赖；保留 package.json / package-lock.json
+node_modules/
+
+# 固件、调试符号与崩溃转储；发布包放 GitHub Releases
+*.bin
+*.elf
+*.map
+*.irisfw
+*.core
+*.dmp
+
+# 本地截图、调试和自动生成的验收报告
+/tmp/
+/.screenshots/
+/validation/local-*
+*.log
+
+# 本地环境及私有连接凭证；保留无秘密的配置模板
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.key
+*.pem
+*pairing-token*
+
+# 系统与编辑器本地文件
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+/.idea/
+/.vscode/
+*.swp
+*.swo
+*~
+
+# 应提交：sdkconfig.defaults、.mosaico.json、dependencies.json、
+# dependencies.lock、partitions.csv、源码、测试和 licenses/。
